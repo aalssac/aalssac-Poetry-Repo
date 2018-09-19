@@ -15,25 +15,10 @@ LICENSE:GNU General Public License v2
 
 #i = 0
 #for noun in nouns:
-#    print nouns [i]
+#    print noun [i]
 #    i = i + 1
 ##    
 
-
-##list of verbs
-#verbs = ["runs",
-#        "floats",
-#         "sinks", 
-#         "types",
-#         "jumps"]
-#
-##list of adjectives
-#adjectives = ["blue",
-#              "orange",
-#              "colorful",
-#              "confusing",
-#              "agreeable",
-#              "eager"]
 #
 #noun = random.choice(nouns)
 ##print noun
@@ -121,10 +106,17 @@ print "{noun} {verb}.".format(noun=noun, verb=verb)
 
 
 i = 0
-for verb in verb:
+for noun in noun:
     i = i + 1
     whitespace = " " * i
-    print whitespace + verb
+    print whitespace + noun
+
+i=0
+print noun [i]
+i = i + 1
+
+
+
 
     
 
