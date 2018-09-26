@@ -104,9 +104,44 @@ verb = random.choice(verbs)
 
 print "{noun} {verb}.".format(noun=noun, verb=verb)
 
+i = 0
+for noun in nouns:
+    i = i + 1
+    whitespace = " " * i
+    print whitespace + noun
+
+i=0
+print noun [i]
+i = i + 1
+
+print "{noun} {verb}.".format(noun=noun, verb=verb)
 
 i = 0
-for noun in noun:
+for noun in nouns:
+    i = i + 1
+    whitespace = " " * i
+    print whitespace + noun
+
+i=0
+print noun [i]
+i = i + 1
+
+print "{noun} {verb}.".format(noun=noun, verb=verb)
+
+i = 0
+for noun in nouns:
+    i = i + 1
+    whitespace = " " * i
+    print whitespace + noun
+
+i=0
+print noun [i]
+i = i + 1
+
+print "{noun} {verb}.".format(noun=noun, verb=verb)
+
+i = 0
+for noun in nouns:
     i = i + 1
     whitespace = " " * i
     print whitespace + noun
