@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct  2 19:22:20 2018
+
+@author: acarr56
+"""
+
+import markovify as m
+
+with open ("beauty.txt") as textfile:
+    beauty = textfile.read()
+    
+with open ("feminism.txt") as textfile:
+    feminism= textfile.read()
+    
+beauty_model = m.Text(beauty)
+feminism_model = m.Text(feminism)
+
+synthesized_model = m.combine([beauty_model, feminism_model], [1,1])
+
+print synthesized_model.make_sentence()
+
+
+
+
