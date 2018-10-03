@@ -13,8 +13,8 @@ with open ("beauty.txt") as textfile:
 with open ("feminism.txt") as textfile:
     feminism= textfile.read()
     
-beauty_model = m.Text(beauty)
-feminism_model = m.Text(feminism)
+beauty_model = m.NewlineText(beauty)
+feminism_model = m.NewlineText(feminism)
 
 synthesized_model = m.combine([beauty_model, feminism_model], [1,1])
 
