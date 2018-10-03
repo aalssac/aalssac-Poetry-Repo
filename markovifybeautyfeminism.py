@@ -20,6 +20,8 @@ synthesized_model = m.combine([beauty_model, feminism_model], [1,1])
 
 print synthesized_model.make_sentence()
 
-
+#print randomly generated sentences
+for i in range(9):
+    print synthesized_model.make_short_sentence(50)
 
 
