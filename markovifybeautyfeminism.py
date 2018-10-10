@@ -27,18 +27,18 @@ synthesized_model = m.combine([beauty_model, joy_model], [1,1])
 
 print synthesized_model.make_sentence()
 
-mylist = []
-for i in range(0,6):
-    mylist.append(synthesized_model.make_short_sentence(50))
-print mylist
-
-with open ("poem.md", "w") as m:
-    for item in mylist:
-        try:
-            m.write(item)
-            m.write("\n")
-        except:
-            pass
+#mylist = []
+#for i in range(0,6):
+#    mylist.append(synthesized_model.make_short_sentence(50))
+#print mylist
+#
+#with open ("poem.md", "w") as m:
+#    for item in mylist:
+#        try:
+#            m.write(item)
+#            m.write("\n")
+#        except:
+#            pass
 
 with open ("poem.md", "a") as m:
     m.write ("## Title")
