@@ -38,13 +38,4 @@ for verb in verbs:
 
 print "They all changed the World"
 ```
-Sample One
-'''
- Artemisia
-  Maya
-   Eleanor
-    Joan
-     Sojourner
-      Rosa
-by the names given to the world
-'''
+
