@@ -10,18 +10,35 @@ import markovify as m
 with open ("beauty.txt") as textfile:
     beauty = textfile.read()
     
-with open ("feminism.txt") as textfile:
-    feminism= textfile.read()
+
+with open ("joys.txt") as textfile :
+    joy= textfile.read()
+    
+
     
 beauty_model = m.NewlineText(beauty)
-feminism_model = m.NewlineText(feminism)
 
-synthesized_model = m.combine([beauty_model, feminism_model], [1,1])
+joy_model = m.NewlineText(joy)
+
+synthesized_model = m.combine([beauty_model, joy_model], [1,1])
+
+
+
 
 print synthesized_model.make_sentence()
 
-#print randomly generated sentences
-for i in range(9):
-    print synthesized_model.make_short_sentence(50)
 
 
+with open ("poem.md", "a") as m:
+    m.write ("## Title")
+    m.write("\n")
+    m.write("```")
+    m.write("\n")
+    for i in range(5):
+        poem = synthesized_model.make_short_sentence(25)
+        m.write(poem)
+        m.write("\n")
+    m.write("\n")
+    m.write("```")
+    m.write("\n")
+       
