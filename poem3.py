@@ -11,21 +11,21 @@ with open ("beauty.txt") as textfile:
     beauty = textfile.read()
     
 
-with open ("joys.txt") as textfile :
-    joy= textfile.read()
+with open ("joys.txt") as textfile:
+    joy = textfile.read()
     
+  
 
     
 beauty_model = m.NewlineText(beauty)
 
 joy_model = m.NewlineText(joy)
 
+
 synthesized_model = m.combine([beauty_model, joy_model], [1,1])
 
 
-
-
-print synthesized_model.make_sentence()
+#print synthesized_model.make_short_sentence(50)
 
 #mylist = []
 #for i in range(0,6):
@@ -40,16 +40,40 @@ print synthesized_model.make_sentence()
 #        except:
 #            pass
 
-with open ("poem.md", "a") as m:
-    m.write ("## Title")
-    m.write("\n")
-    m.write("```")
-    m.write("\n")
+#with open ("poem.md", "a") as m:
+#    m.write ("## Title")
+#    m.write("\n")
+#    m.write("```")
+#    m.write("\n")
+#    for i in range(10):
+#       poem = synthesized_model.make_short_sentence(50)
+#       m.write(poem)
+#       m.write("\n")
+#       m.write("\n")
+#    m.write("```")
+#    m.write("\n")
+#      
+
+
+with open ("poem.txt", "w") as m:
     for i in range(10):
-        poem = synthesized_model.make_short_sentence(50)
-        m.write(poem)
-        m.write("\n")
-    m.write("\n")
-    m.write("```")
-    m.write("\n")
-#       
+       poem = synthesized_model.make_short_sentence(50)
+       m.write(poem)
+
+
+# import libraries
+from playsound import playsound
+from gtts import gTTS
+
+with open ("poem.txt") as text:
+
+    for t in text:
+
+        # text to speech
+        tts = gTTS(text=t, lang="en")
+        
+        # write audio file
+        tts.save("poem.mp3")
+        
+        # play audio file
+        playsound("poem.mp3")

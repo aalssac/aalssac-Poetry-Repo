@@ -92,7 +92,7 @@ random.seed ()
 
 
 nouns = "Artemisia" , "Maya" , "Eleanor" ,  "Joan", "Sojourner" , "Rosa"
-#verbs= "painted", "wrote", "lead", "fought", "escaped", "protested"
+verbs= "painted", "wrote", "lead", "fought", "escaped", "protested"
 
 
 
