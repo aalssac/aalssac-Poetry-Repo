@@ -38,4 +38,28 @@ for verb in verbs:
 
 print "They all changed the World"
 ```
+```
+import markovify as m
 
+with open ("beauty.txt") as textfile:
+    beauty = textfile.read()
+    
+
+with open ("joys.txt") as textfile:
+    joy = textfile.read()
+    
+  
+
+    
+beauty_model = m.NewlineText(beauty)
+
+joy_model = m.NewlineText(joy)
+
+
+synthesized_model = m.combine([beauty_model, joy_model], [1,1])
+
+with open ("poem.txt", "w") as m:
+    for i in range(10):
+       poem = synthesized_model.make_short_sentence(50)
+       m.write(poem)
+```
