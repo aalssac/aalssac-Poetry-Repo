@@ -63,3 +63,5 @@ with open ("poem.txt", "w") as m:
        poem = synthesized_model.make_short_sentence(50)
        m.write(poem)
 ```
+
+![waveform](D:\Users\acarr56\Documents\GitHub\aalssac-Poetry-Repo)
