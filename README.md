@@ -64,4 +64,4 @@ with open ("poem.txt", "w") as m:
        m.write(poem)
 ```
 
-![waveform](Capture.png)
+![aalssac-Poetry-Repo](Capture.PNG)
